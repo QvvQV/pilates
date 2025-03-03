@@ -23,7 +23,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 public class TestFour {
 
     public static WebDriver driver;
-    public static String url = "https://dietsw.tutorplace.ru/";
+    public static String url = "https://pilatesw3.tutorplace.ru/";
 
     @Before
     public void setupAll() {
