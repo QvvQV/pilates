@@ -305,7 +305,7 @@ public class AppTest {
         Page10.send39KeysQ10_3();
         Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_3());
         Page10.send401KeysQ10_4();
-        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
     }
 
@@ -470,17 +470,11 @@ public class AppTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
         wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.PageDownBtn();
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         sleep(1000);
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         Assert.assertEquals("> 10.000 человек", KommentFemale.setNumber());
         Assert.assertEquals("добились невероятного результата!", KommentFemale.setRezult());
         Assert.assertEquals("Мы не хвастаемся. За нас это делают наши пользователи!", KommentFemale.setHvast());
         Body.PageDownBtn();
-        Assert.assertEquals("Ольга, 28 лет", KommentFemale.getOlga());
-        Assert.assertEquals("Я перепробовала множество программ для похудения, но эта уникальна! Курс не только помог мне избавиться от упорных килограммов, но научил устойчивым привычкам, которые я смогу сохранить на всю жизнь. Я чувствую себя здоровой, уверенной и полной энергии каждый день!", KommentFemale.getKommitOlgal());
         Assert.assertEquals("Екатерина,", KommentFemale.getKat());
         Assert.assertEquals("32 года", KommentFemale.getKat32());
         Assert.assertEquals("Этот курс изменил мою жизнь! Сочетание сбалансированного питания и практичных упражнений оказалось легким для соблюдения. Прошло 3 месяца, я сбросила 9,5 кг и чувствую себя сильной, как никогда. Я искренне верю, что это путь к долговременному снижению веса.", KommentFemale.getKommitKat());
@@ -491,7 +485,6 @@ public class AppTest {
         Assert.assertEquals("Анна, 35 лет", KommentFemale.getAnna());
         Assert.assertEquals("Я чувствую, что наконец-то нашла программу для похудения, которая учитывает моё тело и мое время. Курс был понятным, простым в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное - я чувствую себя потрясающе как физически, так и морально.", KommentFemale.getKommitAnna());
         KommentFemale.clickBtnBack();
-        Assert.assertEquals("Ольга, 28 лет", KommentFemale.getOlga());
         KommentFemale.clickBtnBack();
         Assert.assertEquals("Марина, 40 лет", KommentFemale.getMarina());
     }

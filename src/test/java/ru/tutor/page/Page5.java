@@ -47,7 +47,7 @@ public class Page5 extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[5]/div/div/div/div[1]/div/div[2]/div[3]/label")
     private static WebElement Q6_3;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[5]/div/div/div/div[1]/div/div[2]/div[4]/label")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[5]/div/div/div/div[1]/div/div[2]/div[3]/label")
     private static WebElement Q6_4;
 
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[5]/div/div/div/div[1]/div/div[2]/div[4]/button")
