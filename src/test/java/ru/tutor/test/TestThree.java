@@ -268,7 +268,7 @@ public class TestThree {
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
         Page10.send39KeysQ10_3();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send100KeysQ10_4();
+        Page10.send400KeysQ10_4();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
         Page10.clickContinue11();
@@ -286,13 +286,13 @@ public class TestThree {
         Page7.clickQ7_1();
         Page8.clickQ8_1();
         Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
-        Page10.send401KeysQ10_2();
+        Page10.send100KeysQ10_2();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_2());
         Page10.send251KeysQ10_1();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
         Page10.send401KeysQ10_3();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send17KeysQ10_4();
+        Page10.send39KeysQ10_4();
         Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
         Page10.clickContinue11();
@@ -316,7 +316,7 @@ public class TestThree {
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
         Page10.send40KeysQ10_3();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
@@ -336,11 +336,11 @@ public class TestThree {
         Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
         Page10.send250KeysQ10_1();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_2());
-        Page10.send400KeysQ10_2();
+        Page10.send100KeysQ10_2();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
         Page10.send400KeysQ10_3();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
-        Page10.send99KeysQ10_4();
+        Page10.send400KeysQ10_4();
         Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
@@ -361,7 +361,7 @@ public class TestThree {
         Page10.send39KeysQ10_2();
         Page10.send120KeysQ10_1();
         Page10.send39KeysQ10_3();
-        Page10.send100KeysQ10_4();
+        Page10.send401KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -381,7 +381,7 @@ public class TestThree {
         Page10.send251KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send17KeysQ10_4();
+        Page10.send39KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -400,7 +400,7 @@ public class TestThree {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
         wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[1]/h2")));
@@ -432,7 +432,7 @@ public class TestThree {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
         wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
@@ -477,7 +477,7 @@ public class TestThree {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
         wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
@@ -522,7 +522,7 @@ public class TestThree {
         Page10.send40KeysQ10_2();
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
         wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));

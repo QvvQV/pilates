@@ -1,6 +1,7 @@
 package ru.tutor.page;
 
 import com.github.dockerjava.api.model.Driver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,11 +20,11 @@ public class Page10 extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/div[1]/div/h3")
     private static WebElement Header10;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div[2]/div[1]/button")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/div[1]/div/button")
     private static WebElement disableBtn;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/div[1]/div/button")
-    private static WebElement btnContinue;
+//    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/div[1]/div/button")
+//    private static WebElement btnContinue;
 
     @FindBy(tagName = "button")
     private static WebElement Btn;
@@ -31,19 +32,19 @@ public class Page10 extends Driver {
     @FindBy(tagName = "input")
     private static WebElement Color;
 
-    @FindBy(id = "q9__2")
+    @FindBy(id = "q9-2")
     private static WebElement Q10_2;
 
     @FindBy(xpath = "//*[@id=\"q10__2\"]")
     private static WebElement GrQ10_2;
 
-    @FindBy(id = "q9__1")
+    @FindBy(id = "q9-1")
     private static WebElement Q10_1;
 
-    @FindBy(id = "q9__3")
+    @FindBy(id = "q9-3")
     private static WebElement Q10_3;
 
-    @FindBy(id = "q9__4")
+    @FindBy(id = "q9-4")
     private static WebElement Q10_4;
 
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/div[1]/div/div[3]/button")
@@ -73,23 +74,23 @@ public class Page10 extends Driver {
 
     public static Object getQ10_4() {
         Q10_4.getText().trim();
-        return "Возраст";
+        return "Желаемый вес";
     }
 
-    public static void send17KeysQ10_4() {
-        Q10_4.sendKeys("17");
+    public static void send39KeysQ10_4() {
+        Q10_4.sendKeys("39");
     }
 
-    public static void send100KeysQ10_4() {
-        Q10_4.sendKeys("100");
+    public static void send401KeysQ10_4() {
+        Q10_4.sendKeys("401");
     }
 
-    public static void send18KeysQ10_4() {
-        Q10_4.sendKeys("18");
+    public static void send40KeysQ10_4() {
+        Q10_4.sendKeys("40");
     }
 
-    public static void send99KeysQ10_4() {
-        Q10_4.sendKeys("99");
+    public static void send400KeysQ10_4() {
+        Q10_4.sendKeys("400");
     }
 
     // Color Green: "rgba(0, 128, 0, 1)"
@@ -135,23 +136,23 @@ public class Page10 extends Driver {
 
     public static Object getQ10_2() {
         Q10_2.getText().trim();
-        return "Вес";
+        return "Возраст";
     }
 
     public static void send39KeysQ10_2() {
         Q10_2.sendKeys("39");
     }
 
-    public static void send401KeysQ10_2() {
-        Q10_2.sendKeys("401");
-    }
-
     public static void send40KeysQ10_2() {
         Q10_2.sendKeys("40");
     }
 
-    public static void send400KeysQ10_2() {
-        Q10_2.sendKeys("400");
+    public static void send99KeysQ10_2() {
+        Q10_2.sendKeys("99");
+    }
+
+    public static void send100KeysQ10_2() {
+        Q10_2.sendKeys("100");
     }
 
     public static Object getItemQ10_3() {
@@ -165,7 +166,7 @@ public class Page10 extends Driver {
 
     public static Object getQ10_3() {
         Q10_3.getText().trim();
-        return "Желаемый вес";
+        return "Вес";
     }
 
     public static void send39KeysQ10_3() {
@@ -200,6 +201,10 @@ public class Page10 extends Driver {
 
     public static void clickBack8() {
         Back8.click();
+    }
+
+            public static void PgDn10(){
+        Back8.sendKeys(Keys.PAGE_DOWN);
     }
 
 //    public static String ifSendKeysQ10_2False17() {

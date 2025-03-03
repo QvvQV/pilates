@@ -14,34 +14,34 @@ public class KommentMale extends Driver {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section[3]/div/div/div/h2[1]")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section/div/div/div[1]")
     private static WebElement numberPeople;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section[3]/div/div/div/h2[1]")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section/div/div/div[1]")
     private static WebElement rezult;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section[3]/div/div/div/h2[2]")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section/div/div/div[2]/p")
     private static WebElement hvast;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide11\"]/div[2]/h3")
+    @FindBy(xpath = "//*[@id=\"splide02-slide01\"]/div/div[1]")
     private static WebElement Nikita;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide11\"]/div[2]")
+    @FindBy(xpath = "//*[@id=\"splide02-slide01\"]/div/div[2]")
     private static WebElement komentNikita;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide12\"]/div[2]/h3")
+    @FindBy(xpath = "//*[@id=\"splide02-slide02\"]/div/div[1]/div[1]")
     private static WebElement Sergey;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide12\"]/div[2]/h3/b")
+    @FindBy(xpath = "//*[@id=\"splide02-slide02\"]/div/div[1]/div[1]")
     private static WebElement Sergey33;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide12\"]/div[2]")
+    @FindBy(xpath = "//*[@id=\"splide02-slide02\"]/div/div[2]")
     private static WebElement kommentSerg;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide13\"]/div[2]/h3")
+    @FindBy(xpath = "//*[@id=\"splide02-slide03\"]/div/div[1]/div[1]")
     private static WebElement Alex;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide13\"]/div[2]")
+    @FindBy(xpath = "//*[@id=\"splide02-slide03\"]/div/div[2]")
     private static WebElement kommentAlex;
 
     @FindBy(xpath = "//*[@id=\"slick-slide10\"]/div[2]/h3")
@@ -50,10 +50,10 @@ public class KommentMale extends Driver {
     @FindBy(xpath = "//*[@id=\"slick-slide10\"]/div[2]")
     private static WebElement kommentAnna;
 
-    @FindBy(xpath = "/html/body/div/main/div/section[11]/section/section[3]/div/ul[2]/button[2]")
+    @FindBy(xpath = "//*[@id=\"splide02\"]/div[1]/button[2]")
     private static WebElement bntCont;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/section[3]/div/ul[2]/button[1]")
+    @FindBy(xpath = "//*[@id=\"splide02\"]/div[1]/button[1]")
     private static WebElement btnBack;
 
     public static String setNumber() {
@@ -107,8 +107,8 @@ public class KommentMale extends Driver {
 
         public static String getKommitAlex() {
         kommentAlex.getText().trim();
-        return "Советую этот курс! Упражнения разнообразные и эффективные, план " +
-                "тренировок вписался в мой ритм жизни. Автор очень грамотный, объясняет всё доступно." +
+        return "Советую этот курс! Упражнения разнообразные и эффективные, план тренировок вписался в мой ритм жизни." +
+                " Автор очень грамотный, объясняет всё доступно. " +
                 "Результатом доволен, лишний вес уходит, осанка стала гораздо лучше. Рекомендую всем!";
     }
 

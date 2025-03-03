@@ -21,10 +21,10 @@ public class Pay extends Driver {
     @FindBy(xpath = "//*[@id=\"order\"]/div/div/div[1]/h2/b")
     private static WebElement akchia;
 
-    @FindBy(xpath = "//*[@id=\"order\"]/div/div/div[2]/div[1]/div[1]/b")
+    @FindBy(xpath = "//*[@id=\"order\"]/div/div/div[2]/div[1]/div[1]/h2")
     private static WebElement dostup;
 
-    @FindBy(xpath = "//*[@id=\"order\"]/div/div/div[2]/div[1]/div[1]/h4")
+    @FindBy(xpath = "//*[@id=\"order\"]/div/div/div[2]/div[1]/div[1]/h2")
     private static WebElement oneRubl;
 
     @FindBy(xpath = "//*[@id=\"bottom\"]/p")
@@ -33,7 +33,7 @@ public class Pay extends Driver {
     @FindBy(id = "email")
     private static WebElement putEmail;
 
-    @FindBy(xpath = "//*[@id=\"bottom\"]/div[2]/p")
+    @FindBy(xpath = "//*[@id=\"bottom\"]/div[2]")
     private static WebElement error;
 
     @FindBy(id = "mainFormaSubmitBtn")

@@ -1,6 +1,7 @@
 package ru.tutor.page;
 
 import com.github.dockerjava.api.model.Driver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +26,7 @@ public class Page8 extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[9]/div/div/div/button")
     private static WebElement Continue8;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div[2]/div[1]/div[2]/h2")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div/div[1]/div/h3")
     private static WebElement Header8;
 
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div/div[1]/div/div[2]/div[1]/label")
@@ -43,7 +44,7 @@ public class Page8 extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div/div[1]/div/div[2]/div[5]/button")
     private static WebElement Back7;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div[2]/div[1]/div[3]/div/div")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div/div[1]/div/div[2]/div[5]/div/div")
     private static WebElement Count;
 
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[8]/div/div/div[2]/div[1]/div[3]/button[2]")
@@ -82,6 +83,10 @@ public class Page8 extends Driver {
 
     public static void clickBack7() {
         Back7.click();
+    }
+
+        public static void PgDn8(){
+        Back7.sendKeys(Keys.PAGE_DOWN);
     }
 
     public static void clickQ8_1() {

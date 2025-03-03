@@ -203,7 +203,7 @@ public class AppTest {
     @Test
     @DisplayName("Should get text Seven page")
 
-    public void ShouldGetTextSevenPage() {
+    public void ShouldGetTextSevenPage() throws InterruptedException {
 
         Page1.clickMale();
         Page2.clickQ2_1();
@@ -212,16 +212,24 @@ public class AppTest {
         Page5.clickQ6_1();
         Page6.clickQ6_1();
         Assert.assertEquals("Был ли у вас когда-нибудь желаемый вес?", Page7.getHeader7());
+        Page7.PgDn7();
+        sleep(200);
+        Page7.clickBack6();
+        Page6.clickQ6_2();
         Assert.assertEquals("Да, более года назад", Page7.getQ7_1());
+        Page7.clickBack6();
         Assert.assertEquals("Да, недавно", Page7.getQ7_2());
+        Page6.clickQ6_3();
         Assert.assertEquals("Нет, хочу прийти к этому", Page7.getQ7_3());
+        Page7.clickBack6();
+        Page6.clickQ6_4();
         Assert.assertEquals("7/9", Page7.getCount());
     }
 
     @Test
     @DisplayName("Should get func Seven text eight page")
 
-    public void ShouldGetFuncSevenPage() {
+    public void ShouldGetFuncSevenPage() throws InterruptedException {
 
         Page1.clickMale();
         Page2.clickQ2_1();
@@ -231,15 +239,18 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Assert.assertEquals("На какие зоны хотите сделать акцент?", Page8.getHeader8());
+        Page8.PgDn8();
+        sleep(200);
         Page8.clickBack7();
         Page7.clickQ7_2();
         Assert.assertEquals("Пресс и талия", Page8.getQ8_1());
         Assert.assertEquals("Ягодицы и ноги", Page8.getQ8_2());
+        Page8.PgDn8();
         Page8.clickBack7();
         Page7.clickQ7_3();
+        Assert.assertEquals("8/9", Page8.getCount());
         Assert.assertEquals("Спина и осанка", Page8.getQ8_3());
         Assert.assertEquals("Всё тело", Page8.getQ8_4());
-        Assert.assertEquals("8/9", Page8.getCount());
     }
 
     @Test
@@ -256,15 +267,18 @@ public class AppTest {
         Page7.clickQ7_1();
         Page8.clickQ8_1();
         Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
+        Page10.PgDn10();
+        sleep(200);
         Page10.clickBack8();
         Page8.clickQ8_2();
         Assert.assertEquals("9/9", Page10.getCount());
         Page10.clickBack8();
         Page8.clickQ8_3();
-        Assert.assertEquals("Далее", Page10.getContinue11());
         Assert.assertEquals("Возраст", Page10.getQ10_2());
         Assert.assertEquals("Рост", Page10.getQ10_1());
         Assert.assertEquals("Вес", Page10.getQ10_3());
+        sleep(200);
+        Assert.assertEquals("Далее", Page10.getContinue11());
         Page10.clickBack8();
         Page8.clickQ8_4();
         Assert.assertEquals("Желаемый вес", Page10.getQ10_4());
@@ -285,15 +299,14 @@ public class AppTest {
         Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
 
         Page10.send39KeysQ10_2();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send119KeysQ10_1();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_1());
         Page10.send39KeysQ10_3();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send100KeysQ10_4();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_3());
+        Page10.send401KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -307,17 +320,16 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
-        Page10.send401KeysQ10_2();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
+        Page10.send40KeysQ10_2();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send251KeysQ10_1();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_1());
         Page10.send401KeysQ10_3();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send17KeysQ10_4();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_3());
+        Page10.send40KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -331,15 +343,15 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send120KeysQ10_1();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_1());
         Page10.send40KeysQ10_2();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send40KeysQ10_3();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
-        Page10.send18KeysQ10_4();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_3());
+        Page10.send400KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -355,15 +367,15 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send250KeysQ10_1();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_2());
-        Page10.send400KeysQ10_2();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_1());
+        Page10.send40KeysQ10_2();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send400KeysQ10_3();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
-        Page10.send99KeysQ10_4();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_3());
+        Page10.send400KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -379,13 +391,12 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send39KeysQ10_2();
         Page10.send120KeysQ10_1();
         Page10.send39KeysQ10_3();
-        Page10.send100KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -399,13 +410,13 @@ public class AppTest {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send251KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send17KeysQ10_4();
+        Page10.send39KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
+
     }
 
     @Test
@@ -422,10 +433,10 @@ public class AppTest {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[1]/h2")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
 
         Assert.assertEquals("Поздравляем!", Loader.getHeader14());
         Assert.assertEquals("Вы на шаг ближе к шикарному телу!", Loader.getHeader14_1());
@@ -454,10 +465,10 @@ public class AppTest {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.PageDownBtn();
 //        Body.PageDownBtn();
 //        Body.PageDownBtn();
@@ -485,7 +496,7 @@ public class AppTest {
         Assert.assertEquals("Марина, 40 лет", KommentFemale.getMarina());
     }
 
-        @Test
+    @Test
     @DisplayName("Should get funct Loader-Komment Male page")
     public void ShouldFunctLoaderKommentMale() throws InterruptedException {
         Page1.clickMale();
@@ -499,16 +510,12 @@ public class AppTest {
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send400KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.PageDownBtn();
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         sleep(1000);
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         Assert.assertEquals("> 10.000 человек", KommentMale.setNumber());
         Assert.assertEquals("добились невероятного результата!", KommentMale.setRezult());
         Assert.assertEquals("Мы не хвастаемся. За нас это делают наши пользователи!", KommentMale.setHvast());
@@ -521,13 +528,10 @@ public class AppTest {
         sleep(1000);
         Assert.assertEquals("Алексей, 27 лет", KommentMale.getAlex());
         Assert.assertEquals("Советую этот курс! Упражнения разнообразные и эффективные, план тренировок вписался в мой ритм жизни. Автор очень грамотный, объясняет всё доступно. Результатом доволен, лишний вес уходит, осанка стала гораздо лучше. Рекомендую всем!", KommentMale.getKommitAlex());
-        KommentFemale.clickBtnCont();
-        Assert.assertEquals("Анна, 35 лет", KommentMale.getAnna());
-        Assert.assertEquals("Я чувствую, что наконец-то нашла программу для похудения, которая учитывает моё тело и мое время. Курс был понятным, простым в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное - я чувствую себя потрясающе как физически, так и морально.", KommentMale.getKommitAnna());
+        KommentMale.clickBtnCont();
         KommentMale.clickBtnBack();
         Assert.assertEquals("Никита, 29 лет", KommentMale.getNikita());
-        KommentMale.clickBtnBack();
-        Assert.assertEquals("Марина, 40 лет", KommentMale.getAlex());
+
     }
 
     @Test
@@ -544,10 +548,10 @@ public class AppTest {
         Page10.send40KeysQ10_2();
         Page10.send120KeysQ10_1();
         Page10.send40KeysQ10_3();
-        Page10.send18KeysQ10_4();
+        Page10.send400KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.EndBtn();
         sleep(1000);
         Pay.PageUpBtn();
@@ -558,7 +562,7 @@ public class AppTest {
         Assert.assertEquals("к курсу всего за 1 ₽*", Pay.getOneRubl());
         Assert.assertEquals("*Первые 7 дней, далее 399₽ или 99₽ раз в 30 дней или в зависимости от условий. Отмена в любой момент.", Pay.getUsl());
         Assert.assertEquals("Получить доступ", Pay.getBtnText());
-        Assert.assertEquals("none",Pay.getErrorDisplay());
+        Assert.assertEquals("block", Pay.getErrorDisplay());
         Pay.clickMainBtn();
         Assert.assertEquals("Укажите корректный email", Pay.getErrorText());
         Assert.assertEquals("Нажимая кнопку  \"Получить доступ\" вы подтверждаете ознакомление с офертой и тарифами, а также даете согласие на обработку персональных данных.", Pay.getTwiseUslText());

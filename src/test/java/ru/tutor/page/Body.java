@@ -76,7 +76,7 @@ public class Body extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[14]/section/section[2]/div/div/div[1]/h2[2]")
     private static WebElement zdorFood;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[14]/section/section[2]/div/div/div[2]/a")
+    @FindBy(xpath = "//*[@id=\"mainFormaSubmitBtn\"]")
     private static WebElement btnPoluchit;
 
 
