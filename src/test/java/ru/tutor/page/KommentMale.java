@@ -112,19 +112,6 @@ public class KommentMale extends Driver {
                 "Результатом доволен, лишний вес уходит, осанка стала гораздо лучше. Рекомендую всем!";
     }
 
-    public static String getAnna() {
-        anna.getText().trim();
-        return "Анна, 35 лет";
-    }
-
-    public static String getKommitAnna() {
-        kommentAnna.getText().trim();
-        return "Я чувствую, что наконец-то нашла программу для похудения, которая " +
-                "учитывает моё тело и мое время. Курс был понятным, простым " +
-                "в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное " +
-                "- я чувствую себя потрясающе как физически, так и морально.";
-    }
-
     public static void clickBtnCont() {
         bntCont.click();
     }

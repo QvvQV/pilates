@@ -75,16 +75,8 @@ public class Loader extends Driver {
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[11]/section/div/div/div[1]/div[1]")
     private static WebElement all;
 
-    public static Object getTextLoad() {
-        return Load.getText().trim();
-    }
-
-    //    public static Object getLoad(Load){
-//       int Load = Loader.Load;
-//       do {
-//           Load++;
-//       } while (Load<50);
-//        return Load;
+//    public static Object getTextLoad() {
+//        return Load.getText().trim();
 //    }
 
     public static Object getHeader14() {

@@ -76,13 +76,6 @@ public class KommentFemale extends Driver {
         return "Ольга, 28 лет";
     }
 
-    public static String getKommitOlgal() {
-        komentOlga.getText().trim();
-        return "Я перепробовала множество программ для похудения, но эта уникальна! " +
-                "Курс не только помог мне избавиться от упорных килограммов, но научил устойчивым привычкам, " +
-                "которые я смогу сохранить на всю жизнь. Я чувствую себя здоровой, уверенной и полной энергии каждый день!";
-    }
-
     public static String getKat() {
         kat.getText().trim();
         return "Екатерина,";

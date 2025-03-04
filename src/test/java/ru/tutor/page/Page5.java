@@ -118,9 +118,9 @@ public class Page5 extends Driver {
         Back4.sendKeys(Keys.PAGE_DOWN);
     }
 
-    public static boolean chechDisBtn(){
-        if(Objects.equals(chechBtn(), "disabled")){
-            return false;
-        } else return disableBtn.isEnabled();
-    }
+//    public static boolean chechDisBtn(){
+//        if(Objects.equals(chechBtn(), "disabled")){
+//            return false;
+//        } else return disableBtn.isEnabled();
+//    }
 }

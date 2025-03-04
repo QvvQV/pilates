@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-//import static com.codeborne.selenide.Selenide.*;
-//import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class Page6 extends Driver {
 

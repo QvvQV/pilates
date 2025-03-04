@@ -80,9 +80,4 @@ public class Page7 extends Driver {
         public static void clickQ7_3() {
         Q7_3.click();
     }
-
-    public static void clickQ7_4() {
-        Q7_4.click();
-    }
-
 }

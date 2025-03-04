@@ -60,7 +60,6 @@ public class AppTest {
     public void ShouldGetTextFirstPage() {
 
         Assert.assertEquals("- 5кг в неделю", Page1.getFive());
-//        Assert.assertEquals("в неделю", Page1.getWeek());
         Assert.assertEquals("лежа дома на ковре!", Page1.getHome());
         Assert.assertEquals("Пройдите тест и получите персональный план пилатеса для похудения", Page1.getPerson());
         Assert.assertEquals("Тест займет не более 2 минут!", Page1.getTwoMinute());
@@ -109,14 +108,11 @@ public class AppTest {
         Page2.clickQ2_2();
         Assert.assertEquals("Только утром", Page3.getQ3_1());
         Assert.assertEquals("Днем", Page3.getQ3_2());
-//        Page3.PageDw();
         Assert.assertEquals("Хочу тренироваться в любое время", Page3.getQ3_4());
         sleep(200);
         Page3.clickBack2();
         Page2.clickQ2_3();
         Assert.assertEquals("Только вечером", Page3.getQ3_3());
-//        Page3.PageDw();
-//        sleep(200);
         Page3.clickBack2();
         Page2.PageDw();
         Page2.clickQ2_4();
@@ -485,7 +481,6 @@ public class AppTest {
         Assert.assertEquals("Анна, 35 лет", KommentFemale.getAnna());
         Assert.assertEquals("Я чувствую, что наконец-то нашла программу для похудения, которая учитывает моё тело и мое время. Курс был понятным, простым в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное - я чувствую себя потрясающе как физически, так и морально.", KommentFemale.getKommitAnna());
         KommentFemale.clickBtnBack();
-        KommentFemale.clickBtnBack();
         Assert.assertEquals("Марина, 40 лет", KommentFemale.getMarina());
     }
 
@@ -524,6 +519,8 @@ public class AppTest {
         KommentMale.clickBtnCont();
         KommentMale.clickBtnBack();
         Assert.assertEquals("Никита, 29 лет", KommentMale.getNikita());
+        KommentMale.clickBtnBack();
+        Assert.assertEquals("Сергей, ", KommentMale.getSergey());
 
     }
 
@@ -550,7 +547,6 @@ public class AppTest {
         Pay.PageUpBtn();
         sleep(2500);
         Assert.assertEquals("Фигура мечты почти ваша! Успейте забрать тренировки пилатес по акции", Pay.getFigure());
-//        Assert.assertEquals("рационы питания по акции!", Pay.getAkchia());
         Assert.assertEquals("Только сейчас: получите доступ", Pay.getDostup());
         Assert.assertEquals("к курсу всего за 1 ₽*", Pay.getOneRubl());
         Assert.assertEquals("*Первые 7 дней, далее 399₽ или 99₽ раз в 30 дней или в зависимости от условий. Отмена в любой момент.", Pay.getUsl());

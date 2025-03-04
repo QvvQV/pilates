@@ -61,10 +61,10 @@ public class Page1 extends Driver {
         return "- 5кг в неделю";
     }
 
-    public static Object getWeek() {
-        week.getText().trim();
-        return "в неделю";
-    }
+//    public static Object getWeek() {
+//        week.getText().trim();
+//        return "в неделю";
+//    }
 
     public static Object getPerson() {
         person.getText().trim();

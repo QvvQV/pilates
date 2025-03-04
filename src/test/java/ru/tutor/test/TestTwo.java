@@ -72,52 +72,60 @@ public class TestTwo {
 
     @Test
     @DisplayName("Should get func First page + text Two")
-    public void ShouldGetFuncFirstPage() {
+    public void ShouldGetFuncFirstPage() throws InterruptedException {
 
         PageVTwo.clickFemale();
         Assert.assertEquals("Как вы оцениваете свой уровень физической подготовки?", Page2.getHeader2());
         Assert.assertEquals("2/9", Page2.getCount());
+        Page2.PageDw();
+        Assert.assertEquals("Продвинутый", Page2.getQ2_4());
+        sleep(200);
         Page2.clickBack1();
         Assert.assertEquals("минус 2 размера за месяц с пилатесом!", PageVTwo.getPilates());
         PageVTwo.clickMale();
         Assert.assertEquals("Никогда не занимался", Page2.getQ2_1());
         Assert.assertEquals("Начинающий", Page2.getQ2_2());
         Assert.assertEquals("Средний", Page2.getQ2_3());
-        Assert.assertEquals("Продвинутый", Page2.getQ2_4());
     }
 
     @Test
     @DisplayName("Should get funct Two page + text Three")
 
-    public void ShouldGetFunctTwotPage() {
+    public void ShouldGetFunctTwotPage() throws InterruptedException {
 
         PageVTwo.clickMale();
         Page2.clickQ2_1();
         Assert.assertEquals("В какое время вам будет удобно тренироваться?", Page3.getHeader3());
         Assert.assertEquals("3/9", Page3.getCount());
+        Page3.PageDw();
+        sleep(200);
         Page3.clickBack2();
-        Assert.assertEquals("Как вы оцениваете свой уровень физической подготовки??", Page2.getHeader2());
+        Assert.assertEquals("Как вы оцениваете свой уровень физической подготовки?", Page2.getHeader2());
         Page2.clickQ2_2();
         Assert.assertEquals("Только утром", Page3.getQ3_1());
         Assert.assertEquals("Днем", Page3.getQ3_2());
+        Assert.assertEquals("Хочу тренироваться в любое время", Page3.getQ3_4());
+        sleep(200);
         Page3.clickBack2();
         Page2.clickQ2_3();
         Assert.assertEquals("Только вечером", Page3.getQ3_3());
         Page3.clickBack2();
+        Page2.PageDw();
         Page2.clickQ2_4();
-        Assert.assertEquals("Хочу тренироваться в любое время", Page3.getQ3_4());
     }
 
     @Test
     @DisplayName("Should get funct Three page + text Fourth")
 
-    public void ShouldGetFunctThreePage() {
+    public void ShouldGetFunctThreePage() throws InterruptedException {
 
         PageVTwo.clickMale();
         Page2.clickQ2_1();
         Page3.clickQ3_1();
         Assert.assertEquals("Как часто вы готовы тренироваться?", Page4.getHeader4());
         Assert.assertEquals("4/9", Page4.getCount());
+        Page4.PgDown4();
+        sleep(200);
         Page4.clickBack3();
         Assert.assertEquals("В какое время вам будет удобно тренироваться?", Page3.getHeader3());
         Page3.clickQ3_2();
@@ -129,19 +137,21 @@ public class TestTwo {
         Assert.assertEquals("Затрудняюсь ответить", Page4.getQ4_4());
         Page4.clickBack3();
         Page3.clickQ3_4();
-        Assert.assertEquals("Сколько раз вы обычно едите за день?", Page4.getHeader4());
+        Assert.assertEquals("Как часто вы готовы тренироваться?", Page4.getHeader4());
     }
 
     @Test
     @DisplayName("Should get func Fourth page + text Five")
 
-    public void ShouldGetFuncFourthPage() {
+    public void ShouldGetFuncFourthPage() throws InterruptedException {
 
-        PageVTwo.clickMale(); //PageVTwo.clickFemale()
+        PageVTwo.clickMale();
         Page2.clickQ2_1();
         Page3.clickQ3_1();
         Page4.clickQ4_1();
         Assert.assertEquals("Чего вы хотите добиться от тренировок?", Page5.getHeader5());
+        Page5.PageDown5();
+        sleep(200);
         Page5.clickBack4();
         Assert.assertEquals("Как часто вы готовы тренироваться?", Page4.getHeader4());
         Page4.clickQ4_2();
@@ -150,7 +160,31 @@ public class TestTwo {
         Page5.clickBack4();
         Page4.clickQ4_3();
         Assert.assertEquals("Привлекать внимание женщин", Page5.getQ6_4());
-//        Assert.assertEquals("Привлекать внимание мужчин", Page5.getQ6_3());
+        Page5.clickBack4();
+        Page4.clickQ4_4();
+        Assert.assertEquals("5/9", Page5.getCount());
+    }
+
+    @Test
+    @DisplayName("Should get func Fourth page + text Five")
+
+    public void ShouldGetFuncFourthPageFemale() throws InterruptedException {
+
+        PageVTwo.clickFemale();
+        Page2.clickQ2_1();
+        Page3.clickQ3_1();
+        Page4.clickQ4_1();
+        Assert.assertEquals("Чего вы хотите добиться от тренировок?", Page5.getHeader5());
+        Page5.PageDown5();
+        sleep(200);
+        Page5.clickBack4();
+        Assert.assertEquals("Как часто вы готовы тренироваться?", Page4.getHeader4());
+        Page4.clickQ4_2();
+        Assert.assertEquals("Подтянутой формы / плоский живот", Page5.getQ6_1());
+        Assert.assertEquals("Поддерживать свое здоровье", Page5.getQ6_2());
+        Page5.clickBack4();
+        Page4.clickQ4_3();
+        Assert.assertEquals("Привлекать внимание мужчин", Page5.getQ6_3());
         Page5.clickBack4();
         Page4.clickQ4_4();
         Assert.assertEquals("5/9", Page5.getCount());
@@ -159,7 +193,7 @@ public class TestTwo {
     @Test
     @DisplayName("Should get func Five page + text Six")
 
-    public void ShouldGetFuncFivePage() {
+    public void ShouldGetFuncFivePage() throws InterruptedException {
 
         PageVTwo.clickMale();
         Page2.clickQ2_1();
@@ -167,6 +201,8 @@ public class TestTwo {
         Page4.clickQ4_1();
         Page5.clickQ6_1();
         Assert.assertEquals("Насколько легко у вас уходит лишний вес?", Page6.getHeader6());
+        Page6.PgDn6();
+        sleep(200);
         Page6.clickBack5();
         Page5.clickQ6_2();
         Assert.assertEquals("Очень сложно", Page6.getQ6_1());
@@ -174,14 +210,14 @@ public class TestTwo {
         Assert.assertEquals("При должных условиях уходит легко", Page6.getQ6_3());
         Assert.assertEquals("Вес уходит без усилий", Page6.getQ6_4());
         Page6.clickBack5();
-        Page5.clickQ6_4();
+        Page5.clickQ6_3();
         Assert.assertEquals("6/9", Page6.getCount());
     }
 
     @Test
     @DisplayName("Should get text Seven page")
 
-    public void ShouldGetTextSevenPage() {
+    public void ShouldGetTextSevenPage() throws InterruptedException {
 
         PageVTwo.clickMale();
         Page2.clickQ2_1();
@@ -190,16 +226,24 @@ public class TestTwo {
         Page5.clickQ6_1();
         Page6.clickQ6_1();
         Assert.assertEquals("Был ли у вас когда-нибудь желаемый вес?", Page7.getHeader7());
+        Page7.PgDn7();
+        sleep(200);
+        Page7.clickBack6();
+        Page6.clickQ6_2();
         Assert.assertEquals("Да, более года назад", Page7.getQ7_1());
+        Page7.clickBack6();
         Assert.assertEquals("Да, недавно", Page7.getQ7_2());
+        Page6.clickQ6_3();
         Assert.assertEquals("Нет, хочу прийти к этому", Page7.getQ7_3());
+        Page7.clickBack6();
+        Page6.clickQ6_4();
         Assert.assertEquals("7/9", Page7.getCount());
     }
 
     @Test
     @DisplayName("Should get func Seven text eight page")
 
-    public void ShouldGetFuncSevenPage() {
+    public void ShouldGetFuncSevenPage() throws InterruptedException {
 
         PageVTwo.clickMale();
         Page2.clickQ2_1();
@@ -209,6 +253,8 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Assert.assertEquals("На какие зоны хотите сделать акцент?", Page8.getHeader8());
+        Page8.PgDn8();
+        sleep(200);
         Page8.clickBack7();
         Page7.clickQ7_2();
         Assert.assertEquals("Пресс и талия", Page8.getQ8_1());
@@ -234,15 +280,18 @@ public class TestTwo {
         Page7.clickQ7_1();
         Page8.clickQ8_1();
         Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
+        Page10.PgDn10();
+        sleep(200);
         Page10.clickBack8();
         Page8.clickQ8_2();
         Assert.assertEquals("9/9", Page10.getCount());
         Page10.clickBack8();
         Page8.clickQ8_3();
-        Assert.assertEquals("Далее", Page10.getContinue11());
         Assert.assertEquals("Возраст", Page10.getQ10_2());
         Assert.assertEquals("Рост", Page10.getQ10_1());
         Assert.assertEquals("Вес", Page10.getQ10_3());
+        sleep(200);
+        Assert.assertEquals("Далее", Page10.getContinue11());
         Page10.clickBack8();
         Page8.clickQ8_4();
         Assert.assertEquals("Желаемый вес", Page10.getQ10_4());
@@ -263,15 +312,14 @@ public class TestTwo {
         Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
 
         Page10.send39KeysQ10_2();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send119KeysQ10_1();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_1());
         Page10.send39KeysQ10_3();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send400KeysQ10_4();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_3());
+        Page10.send401KeysQ10_4();
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -285,17 +333,16 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
-        Page10.send100KeysQ10_2();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
+        Page10.send40KeysQ10_2();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send251KeysQ10_1();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_1());
         Page10.send401KeysQ10_3();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_3());
-        Page10.send39KeysQ10_4();
-        Assert.assertEquals("rgba(255, 0, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(114, 21, 35, 1)", Page10.getItemQ10_3());
+        Page10.send40KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -309,15 +356,15 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send120KeysQ10_1();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_1());
         Page10.send40KeysQ10_2();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send40KeysQ10_3();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
-        Page10.send40KeysQ10_4();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_3());
+        Page10.send400KeysQ10_4();
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -333,15 +380,15 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send250KeysQ10_1();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_2());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_1());
         Page10.send40KeysQ10_2();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_1());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_2());
         Page10.send400KeysQ10_3();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_3());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_3());
         Page10.send400KeysQ10_4();
-        Assert.assertEquals("rgba(0, 128, 0, 1)", Page10.getItemQ10_4());
+        Assert.assertEquals("rgba(40, 67, 206, 1)", Page10.getItemQ10_4());
         Assert.assertEquals(true, Page10.chechDisBtn());
         Page10.clickContinue11();
     }
@@ -357,13 +404,12 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send39KeysQ10_2();
         Page10.send120KeysQ10_1();
         Page10.send39KeysQ10_3();
         Page10.send40KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -377,13 +423,12 @@ public class TestTwo {
         Page6.clickQ6_1();
         Page7.clickQ7_1();
         Page8.clickQ8_1();
-        Assert.assertEquals("Укажите ваши параметры", Page10.getHeader10());
+        Assert.assertEquals("Укажите свои параметры", Page10.getHeader10());
         Page10.send251KeysQ10_1();
         Page10.send40KeysQ10_2();
         Page10.send40KeysQ10_3();
         Page10.send39KeysQ10_4();
         Assert.assertEquals(false, Page10.chechDisBtn());
-        Page10.clickContinue11();
     }
 
     @Test
@@ -403,7 +448,7 @@ public class TestTwo {
         Page10.send400KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[1]/h2")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
 
         Assert.assertEquals("Поздравляем!", Loader.getHeader14());
         Assert.assertEquals("Вы на шаг ближе к шикарному телу!", Loader.getHeader14_1());
@@ -435,19 +480,13 @@ public class TestTwo {
         Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.PageDownBtn();
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         sleep(1000);
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         Assert.assertEquals("> 10.000 человек", KommentFemale.setNumber());
         Assert.assertEquals("добились невероятного результата!", KommentFemale.setRezult());
         Assert.assertEquals("Мы не хвастаемся. За нас это делают наши пользователи!", KommentFemale.setHvast());
         Body.PageDownBtn();
-        Assert.assertEquals("Ольга, 28 лет", KommentFemale.getOlga());
-        Assert.assertEquals("Я перепробовала множество программ для похудения, но эта уникальна! Курс не только помог мне избавиться от упорных килограммов, но научил устойчивым привычкам, которые я смогу сохранить на всю жизнь. Я чувствую себя здоровой, уверенной и полной энергии каждый день!", KommentFemale.getKommitOlgal());
         Assert.assertEquals("Екатерина,", KommentFemale.getKat());
         Assert.assertEquals("32 года", KommentFemale.getKat32());
         Assert.assertEquals("Этот курс изменил мою жизнь! Сочетание сбалансированного питания и практичных упражнений оказалось легким для соблюдения. Прошло 3 месяца, я сбросила 9,5 кг и чувствую себя сильной, как никогда. Я искренне верю, что это путь к долговременному снижению веса.", KommentFemale.getKommitKat());
@@ -458,12 +497,10 @@ public class TestTwo {
         Assert.assertEquals("Анна, 35 лет", KommentFemale.getAnna());
         Assert.assertEquals("Я чувствую, что наконец-то нашла программу для похудения, которая учитывает моё тело и мое время. Курс был понятным, простым в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное - я чувствую себя потрясающе как физически, так и морально.", KommentFemale.getKommitAnna());
         KommentFemale.clickBtnBack();
-        Assert.assertEquals("Ольга, 28 лет", KommentFemale.getOlga());
-        KommentFemale.clickBtnBack();
         Assert.assertEquals("Марина, 40 лет", KommentFemale.getMarina());
     }
 
-            @Test
+    @Test
     @DisplayName("Should get funct Loader-Komment Male page")
     public void ShouldFunctLoaderKommentMale() throws InterruptedException {
         PageVTwo.clickMale();
@@ -480,13 +517,9 @@ public class TestTwo {
         Page10.send40KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.PageDownBtn();
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         sleep(1000);
-//        Body.PageDownBtn();
-//        Body.PageDownBtn();
         Assert.assertEquals("> 10.000 человек", KommentMale.setNumber());
         Assert.assertEquals("добились невероятного результата!", KommentMale.setRezult());
         Assert.assertEquals("Мы не хвастаемся. За нас это делают наши пользователи!", KommentMale.setHvast());
@@ -499,13 +532,11 @@ public class TestTwo {
         sleep(1000);
         Assert.assertEquals("Алексей, 27 лет", KommentMale.getAlex());
         Assert.assertEquals("Советую этот курс! Упражнения разнообразные и эффективные, план тренировок вписался в мой ритм жизни. Автор очень грамотный, объясняет всё доступно. Результатом доволен, лишний вес уходит, осанка стала гораздо лучше. Рекомендую всем!", KommentMale.getKommitAlex());
-        KommentFemale.clickBtnCont();
-        Assert.assertEquals("Анна, 35 лет", KommentMale.getAnna());
-        Assert.assertEquals("Я чувствую, что наконец-то нашла программу для похудения, которая учитывает моё тело и мое время. Курс был понятным, простым в освоении и очень мотивирующим. Я сбросила 5,5 кг, а главное - я чувствую себя потрясающе как физически, так и морально.", KommentMale.getKommitAnna());
+        KommentMale.clickBtnCont();
         KommentMale.clickBtnBack();
         Assert.assertEquals("Никита, 29 лет", KommentMale.getNikita());
         KommentMale.clickBtnBack();
-        Assert.assertEquals("Марина, 40 лет", KommentMale.getAlex());
+        Assert.assertEquals("Сергей, ", KommentMale.getSergey());
     }
 
     @Test
@@ -525,18 +556,17 @@ public class TestTwo {
         Page10.send400KeysQ10_4();
         Page10.clickContinue11();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6000));
-        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[14]/section/div/div/div[1]/div[2]/h3")));
+        wait.until(visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/main/div/section[11]/section/div[1]/div/div/div[1]/h2[1]")));
         Body.EndBtn();
         sleep(1000);
         Pay.PageUpBtn();
         sleep(2500);
         Assert.assertEquals("Фигура мечты почти ваша! Успейте забрать тренировки пилатес по акции", Pay.getFigure());
-//        Assert.assertEquals("рационы питания по акции!", Pay.getAkchia());
         Assert.assertEquals("Только сейчас: получите доступ", Pay.getDostup());
         Assert.assertEquals("к курсу всего за 1 ₽*", Pay.getOneRubl());
         Assert.assertEquals("*Первые 7 дней, далее 399₽ или 99₽ раз в 30 дней или в зависимости от условий. Отмена в любой момент.", Pay.getUsl());
         Assert.assertEquals("Получить доступ", Pay.getBtnText());
-        Assert.assertEquals("none",Pay.getErrorDisplay());
+        Assert.assertEquals("block", Pay.getErrorDisplay());
         Pay.clickMainBtn();
         Assert.assertEquals("Укажите корректный email", Pay.getErrorText());
         Assert.assertEquals("Нажимая кнопку  \"Получить доступ\" вы подтверждаете ознакомление с офертой и тарифами, а также даете согласие на обработку персональных данных.", Pay.getTwiseUslText());

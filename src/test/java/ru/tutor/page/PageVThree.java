@@ -15,34 +15,34 @@ public class PageVThree extends Driver {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[1]/div[1]/h1")
     private static WebElement minus;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[1]/div[1]/h1")
     private static WebElement week;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[1]/div[1]/p")
     private static WebElement pilates;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[1]/div[2]/p[1]")
     private static WebElement bespl;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[1]/div[2]/p[2]")
     private static WebElement twoMinute;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[2]/div[1]/h3")
     private static WebElement fm;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[2]/div[1]/h2")
     private static WebElement number;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[2]/div/p[1]")
     private static WebElement back;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[2]/div/p[2]")
     private static WebElement strongMuskuls;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[2]/div/p[3]")
     private static WebElement weight;
 
     @FindBy(xpath = "//*[@id=\"app\"]/main/div/section[1]/div/div/div[1]/div[2]/div[2]/div[2]/label")

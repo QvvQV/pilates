@@ -68,10 +68,6 @@ public class Page10 extends Driver {
         return "Далее";
     }
 
-//    public static void clickContinue6() {
-//        Continue6.click();
-//    }
-
     public static Object getQ10_4() {
         Q10_4.getText().trim();
         return "Желаемый вес";
