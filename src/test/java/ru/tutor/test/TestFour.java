@@ -545,7 +545,7 @@ public class TestFour {
         Assert.assertEquals("к курсу всего за 1 ₽*", Pay.getOneRubl());
         Assert.assertEquals("*Первые 7 дней, далее 399₽ или 99₽ раз в 30 дней или в зависимости от условий. Отмена в любой момент.", Pay.getUsl());
         Assert.assertEquals("Получить доступ", Pay.getBtnText());
-        Assert.assertEquals("block", Pay.getErrorDisplay());
+        Assert.assertEquals("none", Pay.getErrorDisplay());
         Pay.clickMainBtn();
         Assert.assertEquals("Укажите корректный email", Pay.getErrorText());
         Assert.assertEquals("Нажимая кнопку  \"Получить доступ\" вы подтверждаете ознакомление с офертой и тарифами, а также даете согласие на обработку персональных данных.", Pay.getTwiseUslText());
